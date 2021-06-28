@@ -57,6 +57,7 @@ class PalettesAnalyzer(
   }
 
   fun setComputeRate(value: Float) {
+    queue.clear()
     queue.add(Runnable {
       ns = 1000000000.0 / (value * 30).coerceAtLeast(1f)
     })
